@@ -10,7 +10,7 @@ def add_student(name, age, grade, subjects):
 	- grade (float): The grade of the student.
 	- subjects (list of str): The subjects the student is enrolled in.
 	"""
-# Code to add a new student record
+	# Code to add a new student record
 	if name in students:
 		print(f'Student {name} already exists.')
 	students[name] = {
@@ -27,9 +27,9 @@ def update_student(name):
 	- name (str): The name of the student whose record is to be updated.
 	"""
 
-# Check if the student exists
-# Prompt the user to update fields and keep current values if fields are empty
-# Code to update the student's record
+	# Check if the student exists
+	# Prompt the user to update fields and keep current values if fields are empty
+	# Code to update the student's record
 	if name in students:
 		print(f'Updating student {name}. Leave blank to keep the current value.')
 		age = input(f'Enter student\'s new age (current: {students[name]["age"]}): ')
@@ -53,8 +53,8 @@ def delete_student(name):
 	- name (str): The name of the student to delete.
 	"""
 
-# Check if the student exists
-# Code to delete the student's record
+	# Check if the student exists
+	# Code to delete the student's record
 	if name in students:
 		del students[name]
 		print(f'Student {name} deleted successfully.')
@@ -68,8 +68,8 @@ def search_student(name):
 	- name (str): The name of the student to search for.
 	"""
 
-# Check if the student exists
-# Code to return the student's record
+	# Check if the student exists
+	# Code to return the student's record
 	if name in students:
 		print(f'Details for student {name}:\nAge: {students[name]["age"]}\nGrade: {students[name]["grade"]}\nSubjects: {", ".join(students[name]["subjects"])}')
 	else:
@@ -79,8 +79,8 @@ def list_all_students():
 	List all student records.
 	"""
 
-# Check if there are any student records
-# Code to list all students
+	# Check if there are any student records
+	# Code to list all students
 	if students:
 		for name, details in students.items():
 			print(f'Name: {name}\nAge: {details["age"]}\nGrade: {details["grade"]}\nSubjects: {", ".join(details["subjects"])}')
